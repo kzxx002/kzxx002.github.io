@@ -1,0 +1,121 @@
+# Butterfly 主题配置
+# Docs: https://butterfly.js.org/posts/21cfbf15/
+
+# 导航栏
+nav:
+  logo:
+  display_title: true
+  fixed: false
+
+# 菜单
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  关于: /about/ || fas fa-heart
+
+# 搜索
+local_search:
+  enable: true
+  preload: false
+
+# 代码块
+code_block:
+  theme: mac
+  macStyle: true
+  height_limit: false
+
+# 社交图标
+social:
+  fab fa-github: https://github.com/kzxx002 || Github
+
+# 头像
+avatar:
+  img: /img/avatar.png
+  effect: true
+
+# 页脚
+footer:
+  owner:
+    enable: true
+    since: 2025
+  copyright: true
+  custom_text:
+
+# 顶部图片
+index_img: /img/home_bg.jpg
+default_top_img: /img/default_bg.jpg
+archive_img: /img/archive_bg.jpg
+tag_img: /img/tag_bg.jpg
+category_img: /img/category_bg.jpg
+
+# 文章元信息
+post_meta:
+  date_type: both
+  date_format: relative
+  categories: true
+  tags: true
+
+# TOC 目录
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false
+
+# 版权信息
+post_copyright:
+  enable: true
+  decode: false
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# 相关文章
+related_post:
+  enable: true
+  limit: 6
+  date_type: created
+
+# 页面过渡动画
+canvas_nest:
+  enable: false
+
+# 打字机效果
+subtitle:
+  enable: true
+  source: false
+  sub:
+    - 记录生活，分享技术
+    - 代码改变世界
+    - 保持好奇心，持续学习
+
+# 字数统计
+wordcount:
+  enable: true
+  count: true
+  min_length: 1
+
+# 图片懒加载
+lazyload:
+  enable: true
+
+# 页面加载动画
+loading:
+  full_page: false
+  pace:
+    enable: true
+
+# CDN
+CDN:
+  option:
+
+# 页脚背景
+footer_bg: true
+
+# 自定义 CSS/JS
+inject:
+  head:
+  bottom:
