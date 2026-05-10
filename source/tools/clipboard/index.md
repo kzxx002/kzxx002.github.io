@@ -1,5 +1,5 @@
 ---
-title: 云剪切板
+title: 云剪贴板
 date: 2025-05-10 12:00:00
 permalink: /tools/clipboard/
 comments: false
