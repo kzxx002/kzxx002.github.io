@@ -1,0 +1,45 @@
+{
+  "updateDate": "2026-05-10",
+  "news": [
+    {
+      "title": "人工智能终端系列国家标准正式发布",
+      "summary": "涉及手机、眼镜、耳机等终端产品，首批标准包含7个品类，明确了智能化概念、等级划分和测试方法。",
+      "image": "https://picsum.photos/seed/ai-standard-2026/400/240",
+      "category": "科技",
+      "categoryColor": "#4facfe",
+      "link": "https://www.chinanews.com.cn/cj/2026/05-08/10617706.shtml"
+    },
+    {
+      "title": "四部门发文促进人工智能与能源双向赋能",
+      "summary": "国家能源局等四部门联合印发行动方案，力争到2030年构建AI与能源深度融合的发展新格局。",
+      "image": "https://picsum.photos/seed/ai-energy-2026/400/240",
+      "category": "政策",
+      "categoryColor": "#43e97b",
+      "link": "https://finance.people.com.cn/n1/2026/0508/c1004-40716118.html"
+    },
+    {
+      "title": "2026世界数字教育大会将在杭州举办",
+      "summary": "5月11日至13日，教育部与浙江省共同举办数字教育大会，将发布8项重磅成果，含全球AI教育服务平台。",
+      "image": "https://picsum.photos/seed/digital-edu-2026/400/240",
+      "category": "教育",
+      "categoryColor": "#fa709a",
+      "link": "https://edu.people.com.cn/n1/2026/0507/c1006-40715177.html"
+    },
+    {
+      "title": "深圳\"科技+文化\"激活夜间消费新引擎",
+      "summary": "深圳依托地铁站点串联城市光影与商圈资源，将地铁出入口打造成展示城市风貌的全新窗口。",
+      "image": "https://picsum.photos/seed/shenzhen-night-2026/400/240",
+      "category": "社会",
+      "categoryColor": "#f7971e",
+      "link": "https://news.cctv.com/"
+    },
+    {
+      "title": "新能源汽车等高附加值产品出口势头强劲",
+      "summary": "4月份外贸运行展现强劲韧性，新能源汽车、消费电子产品等出口持续向好，从沿海\"独唱\"转向全域协同。",
+      "image": "https://picsum.photos/seed/ev-export-2026/400/240",
+      "category": "经济",
+      "categoryColor": "#a18cd1",
+      "link": "https://news.cctv.com/"
+    }
+  ]
+}
