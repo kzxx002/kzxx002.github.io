@@ -73,15 +73,78 @@ post_copyright:
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+# 回到顶部
+back_to_top:
+  enable: true
+  percentage: true
+  scroll_percent: true
+
+# 文章分享
+share:
+  enable: true
+  sites: twitter, facebook, weibo, qq, wechat, linkedin
+
+# 文章点赞
+post_pagination:
+  enable: true
+  style: fixed
+  order_type: by_tags
+
+# 阅读进度条
+progressBar:
+  enable: true
+  position: top
+  color: '#37c6c0'
+  height: 3px
+
+# 复制提示
+copy:
+  enable: true
+  copyright:
+    enable: true
+    limit_count: 50
+
+# 评论系统 - Giscus
+comments:
+  use: Giscus
+  text: true
+  lazyload: true
+  count: true
+  card_post_count: true
+
+giscus:
+  enable: true
+  repo: kzxx002/kzxx002.github.io
+  repo_id:
+  category_id:
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: bottom
+  comment_count: 1
+  lang: zh-CN
+  lazyload: true
+
 # 相关文章
 related_post:
   enable: true
   limit: 6
   date_type: created
 
+# 暗黑模式
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: true
+
 # 页面过渡动画
 canvas_nest:
-  enable: false
+  enable: true
+  color: '0,0,0'
+  opacity: 0.5
+  zIndex: -1
+  count: 99
 
 # 打字机效果
 subtitle:
