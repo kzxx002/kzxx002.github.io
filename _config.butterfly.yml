@@ -171,6 +171,9 @@ darkmode:
   enable: true
   button: true
   autoChangeMode: true
+  theme:
+    light: '#f7f9fc'
+    dark: '#1a1a2e'
 
 # 页面粒子动画
 canvas_nest:
@@ -215,4 +218,141 @@ footer_bg: true
 # 自定义 CSS/JS
 inject:
   head:
+    - |
+      <style>
+        /* ===== 暗黑模式优化 ===== */
+        [data-theme="dark"] {
+          --global-bg: #1a1a2e;
+          --card-bg: #222244;
+          --sidebar-bg: #222244;
+          --font-color: #e0e0f0;
+          --hr-border: #333366;
+          --search-bg: #2a2a4a;
+          --search-input-color: #e0e0f0;
+          --search-result-title: #c0c0e8;
+          --preloader-bg: #1a1a2e;
+          --preloader-color: #49b1f5;
+          --border-color: #333366;
+          --pseudo-hover: rgba(73,177,245,0.15);
+          --shadow-color: rgba(0,0,0,0.4);
+          --text-bg-hover: rgba(73,177,245,0.12);
+          --badge-bg: rgba(73,177,245,0.15);
+          --badge-color: #7ec8f5;
+          --btn-bg: rgba(73,177,245,0.15);
+          --btn-color: #49b1f5;
+          --btn-hover-color: #fff;
+          --toc-bg: #222244;
+          --scrollbar-color: #333366;
+          --scrollbar-hover-color: #49b1f5;
+          --article-bg: #222244;
+          --article-p: #c8c8e0;
+          --article-h1: #e8e8ff;
+          --article-h2: #e0e0f0;
+          --article-h3: #d0d0e8;
+          --article-h4: #c8c8e0;
+          --article-h5: #b8b8d8;
+          --article-h6: #a8a8c8;
+          --article-blockquote: #c8c8e0;
+          --article-code-bg: #2a2a4a;
+          --article-code-color: #e8a0ff;
+          --article-img-bg: transparent;
+          --article-table-border: #333366;
+          --article-table-thead-bg: #2a2a4a;
+          --article-table-thead-color: #e0e0f0;
+          --article-table-tr-hover-bg: rgba(73,177,245,0.08);
+          --tag-bg: rgba(73,177,245,0.12);
+          --tag-color: #7ec8f5;
+          --tag-hover-color: #fff;
+          --tag-hover-bg: #49b1f5;
+          --pagination-bg: #2a2a4a;
+          --pagination-hover-bg: #49b1f5;
+          --pagination-hover-color: #fff;
+          --web-bg: #1a1a2e;
+          --icon-color: #c0c0e8;
+          --icon-color-hover: #49b1f5;
+          --reward-pop: #222244;
+          --toc-h: #e0e0f0;
+          --page-bg: #1a1a2e;
+          --text-selection-bg: rgba(73,177,245,0.3);
+          --btn-pink: #ff7eb3;
+          --btn-pink-hover: #ff5a9e;
+        }
+
+        /* 导航栏 */
+        [data-theme="dark"] #nav {
+          background: rgba(26,26,46,0.92);
+          backdrop-filter: blur(12px);
+        }
+
+        /* 卡片圆角与阴影 */
+        [data-theme="dark"] #aside-content .card-widget,
+        [data-theme="dark"] #recent-posts > .recent-post-item,
+        [data-theme="dark"] .article-sort-item,
+        [data-theme="dark"] .tag-cloud-list a,
+        [data-theme="dark"] .category-list-item {
+          background: var(--card-bg);
+          border: 1px solid var(--border-color);
+          border-radius: 12px;
+          transition: all 0.3s;
+        }
+        [data-theme="dark"] #aside-content .card-widget:hover,
+        [data-theme="dark"] .article-sort-item:hover {
+          border-color: var(--btn-color);
+          box-shadow: 0 4px 20px rgba(73,177,245,0.1);
+        }
+
+        /* 文章内容 */
+        [data-theme="dark"] #article-container {
+          color: var(--article-p);
+        }
+        [data-theme="dark"] #article-container h1,
+        [data-theme="dark"] #article-container h2,
+        [data-theme="dark"] #article-container h3 {
+          color: var(--article-h2);
+        }
+        [data-theme="dark"] #article-container a {
+          color: #7ec8f5;
+        }
+        [data-theme="dark"] #article-container a:hover {
+          color: #a8ddff;
+          text-decoration: underline;
+        }
+
+        /* 代码块 */
+        [data-theme="dark"] #article-container pre,
+        [data-theme="dark"] #article-container code {
+          background: #16162a;
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+        }
+
+        /* 滚动条 */
+        [data-theme="dark"] ::-webkit-scrollbar {
+          width: 6px;
+          background: var(--global-bg);
+        }
+        [data-theme="dark"] ::-webkit-scrollbar-thumb {
+          background: var(--scrollbar-color);
+          border-radius: 3px;
+        }
+        [data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+          background: var(--scrollbar-hover-color);
+        }
+
+        /* 页脚 */
+        [data-theme="dark"] #footer {
+          background: #16162a;
+          color: var(--article-p);
+        }
+
+        /* 阅读进度条 */
+        [data-theme="dark"] #page-top {
+          background: rgba(26,26,46,0.92);
+        }
+
+        /* 暗黑模式按钮 */
+        [data-theme="dark"] #darkmodetoggle {
+          color: #ffcb6b;
+        }
+      </style>
   bottom:
