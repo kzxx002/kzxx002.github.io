@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+
+Sitemap: https://kzxx002.github.io/sitemap.xml
