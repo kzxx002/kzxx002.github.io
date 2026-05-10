@@ -52,10 +52,6 @@ mermaid:
 aplayerInject:
   enable: true
   per_page: false
-inject:
-  head:
-  bottom:
-    - <meting-js server="netease" type="playlist" id="8060016496" fixed="true" mini="true" autoplay="false" volume="0.6" mutex="true" list-folded="true" preload="auto" theme="#49b1f5"></meting-js>
 
 # 社交图标
 social:
