@@ -88,3 +88,31 @@ theme: butterfly
 # Deployment - use GitHub Actions instead
 deploy:
   type: ''
+
+# RSS 订阅
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 150
+  content_limit_delim: '...'
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
+  rel: false
+  tags: true
+  categories: true
+
+# 搜索数据库
+search:
+  path: search.json
+  field: post
+  content: true
+  format: striptags
