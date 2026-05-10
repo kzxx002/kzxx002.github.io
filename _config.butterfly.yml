@@ -13,6 +13,8 @@ menu:
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
+  图床: /tools/upload/ || fas fa-cloud-upload-alt
+  剪切板: /tools/clipboard/ || fas fa-clipboard
   关于: /about/ || fas fa-heart
 
 # 搜索
@@ -115,8 +117,8 @@ comments:
 giscus:
   enable: true
   repo: kzxx002/kzxx002.github.io
-  repo_id:
-  category_id:
+  repo_id: # 需要去 https://giscus.app 生成
+  category_id: # 需要去 https://giscus.app 生成
   mapping: pathname
   strict: 0
   reactions_enabled: 1
