@@ -14,8 +14,15 @@ menu:
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
   图床: /tools/upload/ || fas fa-cloud-upload-alt
-  剪切板: /tools/clipboard/ || fas fa-clipboard
+  剪贴板: /tools/clipboard/ || fas fa-clipboard
+  友链: /link/ || fas fa-link
+  相册: /gallery/ || fas fa-images
   关于: /about/ || fas fa-heart
+
+# Pjax 无刷新加载
+pjax:
+  enable: true
+  exclusion:
 
 # 搜索
 local_search:
@@ -28,9 +35,32 @@ code_block:
   macStyle: true
   height_limit: false
 
+# KaTeX 数学公式
+katex:
+  enable: true
+  per_page: false
+  hide_scrollbar: true
+
+# Mermaid 图表
+mermaid:
+  enable: true
+  theme:
+    light: default
+    dark: dark
+
+# Aplayer 音乐播放器
+aplayerInject:
+  enable: true
+  per_page: false
+inject:
+  head:
+  bottom:
+    - <meting-js server="netease" type="playlist" id="8060016496" fixed="true" mini="true" autoplay="false" volume="0.6" mutex="true" list-folded="true" preload="auto" theme="#49b1f5"></meting-js>
+
 # 社交图标
 social:
   fab fa-github: https://github.com/kzxx002 || Github
+  fas fa-rss: /atom.xml || RSS
 
 # 头像
 avatar:
@@ -59,6 +89,9 @@ post_meta:
   categories: true
   tags: true
 
+# 阅读时长（基于 wordcount）
+# wordcount 插件自动计算，Butterfly 会自动显示
+
 # TOC 目录
 toc:
   post: true
@@ -86,7 +119,7 @@ share:
   enable: true
   sites: twitter, facebook, weibo, qq, wechat, linkedin
 
-# 文章点赞
+# 文章分页
 post_pagination:
   enable: true
   style: fixed
@@ -106,6 +139,9 @@ copy:
     enable: true
     limit_count: 50
 
+# 折叠面板 (fold tag)
+# 在文章中使用 {% fold 标题 %} 内容 {% endfold %}
+
 # 评论系统 - Giscus
 comments:
   use: Giscus
@@ -117,8 +153,8 @@ comments:
 giscus:
   enable: true
   repo: kzxx002/kzxx002.github.io
-  repo_id: # 需要去 https://giscus.app 生成
-  category_id: # 需要去 https://giscus.app 生成
+  repo_id:
+  category_id:
   mapping: pathname
   strict: 0
   reactions_enabled: 1
@@ -140,7 +176,7 @@ darkmode:
   button: true
   autoChangeMode: true
 
-# 页面过渡动画
+# 页面粒子动画
 canvas_nest:
   enable: true
   color: '0,0,0'
