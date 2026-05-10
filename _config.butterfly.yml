@@ -188,9 +188,7 @@ subtitle:
   enable: true
   source: false
   sub:
-    - 记录生活，分享技术
-    - 代码改变世界
-    - 保持好奇心，持续学习
+    - 正在获取一言...
 
 # 字数统计
 wordcount:
@@ -358,6 +356,6 @@ inject:
   home_top:
     - <script src="/js/daily-news.js"></script>
   bottom:
-
+    - <script src="/js/hitokoto.js"></script>
 # Hexo 复制 _data 目录中的文件到 public（用于新闻数据等静态 JSON）
 # 不需要插件，手动用 hexo generator 或直接把 JSON 放到 source 根目录
