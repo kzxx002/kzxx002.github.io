@@ -1,17 +1,16 @@
 /**
  * Hitokoto 一言组件
  * 将博客副标题替换为一言API返回的内容
- * 通过禁用 Butterfly 内置 subtitle 打字机，接管 #subtitle 元素
+ * 定时轮换：每次显示 10 秒后自动请求下一句
  */
 (function () {
   'use strict';
 
-  function initHitokoto() {
-    var el = document.getElementById('subtitle');
-    if (!el) return;
+  var INTERVAL = 10000; /* 每句显示时长（毫秒） */
+  var el, currentTimer = null;
 
-    /* 销毁已有的 Typed 实例（Butterfly 内置的），避免冲突 */
-    if (el._typed) {
+  function destroyTyped() {
+    if (el && el._typed) {
       try { el._typed.destroy(); } catch (e) {}
       el._typed = null;
     }
@@ -19,59 +18,79 @@
       try { window.typed.destroy(); } catch (e) {}
       window.typed = null;
     }
+  }
 
-    /* 清空内容，显示加载占位 */
-    el.textContent = '';
+  function showText(text, from) {
+    var full = text + (from ? (' —— ' + from) : '');
+
+    /* 淡出 → 切换内容 → 淡入 */
+    el.style.transition = 'opacity .4s';
     el.style.opacity = '0';
 
+    setTimeout(function () {
+      destroyTyped();
+      el.textContent = '';
+
+      el.style.opacity = '1';
+
+      if (typeof Typed !== 'undefined') {
+        var typed = new Typed('#subtitle', {
+          strings: [full],
+          startDelay: 100,
+          typeSpeed: 60,
+          showCursor: true,
+          cursorChar: '|',
+          loop: false,
+          onComplete: function () {
+            var cursor = el.querySelector('.typed-cursor');
+            if (cursor) cursor.style.display = 'none';
+          }
+        });
+        el._typed = typed;
+        window.typed = typed;
+      } else {
+        el.textContent = full;
+      }
+    }, 400);
+  }
+
+  function fetchHitokoto() {
     fetch('https://v1.hitokoto.cn/?c=a&c=b&c=d&c=i&c=k')
       .then(function (res) { return res.json(); })
       .then(function (data) {
         if (!data || !data.hitokoto) {
-          el.textContent = '生活不止眼前的代码';
-          el.style.opacity = '1';
-          return;
-        }
-
-        var text = data.hitokoto;
-        var from = data.from ? (' —— ' + data.from) : '';
-        var full = text + from;
-
-        el.style.opacity = '1';
-
-        /* 使用 Typed.js 打字机效果 */
-        if (typeof Typed !== 'undefined') {
-          el.textContent = '';
-          var typed = new Typed('#subtitle', {
-            strings: [full],
-            startDelay: 200,
-            typeSpeed: 70,
-            showCursor: true,
-            cursorChar: '|',
-            loop: false,
-            onComplete: function () {
-              /* 打字完成后移除光标闪烁 */
-              var cursor = el.querySelector('.typed-cursor');
-              if (cursor) cursor.style.display = 'none';
-            }
-          });
-          window.typed = typed;
+          showText('生活不止眼前的代码', '');
         } else {
-          el.textContent = full;
+          showText(data.hitokoto, data.from);
         }
       })
       .catch(function () {
-        el.textContent = '生活不止眼前的代码';
-        el.style.opacity = '1';
+        showText('生活不止眼前的代码', '');
       });
   }
 
-  /* 等待页面 DOM 就绪后执行（确保 Butterfly 的 subtitle 脚本已运行） */
+  function startLoop() {
+    fetchHitokoto();
+    currentTimer = setInterval(fetchHitokoto, INTERVAL);
+  }
+
+  function init() {
+    el = document.getElementById('subtitle');
+    if (!el) return;
+
+    destroyTyped();
+    el.textContent = '';
+    el.style.opacity = '0';
+
+    startLoop();
+  }
+
+  /* 等待 DOM 就绪（确保 Butterfly 的 subtitle 脚本已运行） */
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
-      setTimeout(initHitokoto, 50);
+      setTimeout(init, 50);
     });
   } else {
-    setTimeout(initHitokoto, 50);
+    setTimeout(init, 50);
   }
 })();
