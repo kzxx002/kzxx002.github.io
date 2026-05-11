@@ -56,6 +56,12 @@
       font-weight: 700;
       letter-spacing: .5px;
     }
+    .dn-header-disclaimer {
+      font-size: 12px;
+      opacity: .45;
+      margin-left: 2px;
+      font-weight: 400;
+    }
     .dn-header-date {
       margin-left: auto;
       font-size: 13px;
@@ -186,7 +192,7 @@
     container.innerHTML = `
       <div class="dn-header">
         <span class="dn-header-icon">&#x1F4F0;</span>
-        <span class="dn-header-title">每日新闻</span>
+        <span class="dn-header-title">每日新闻</span><span class="dn-header-disclaimer">内容由 AI 生成，请核实重要信息。</span>
         <span class="dn-header-date">${dateLabel}</span>
       </div>
       <div class="dn-scroll">${cardsHTML}</div>
