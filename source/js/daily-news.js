@@ -14,15 +14,24 @@
   /* ---- 样式注入 ---- */
   const style = document.createElement('style');
   style.textContent = `
-    /* 新闻容器 */
+    /* 新闻容器 —— 完全独立，不继承任何 Butterfly 文章样式 */
     #${CONTAINER_ID} {
       max-width: 100%;
       width: 100%;
-      margin: 0 0 30px;
+      margin: 0 0 24px;
       padding: 0;
       animation: dn-fadeIn .6s ease-out;
-      /* 不参与文章列表的 grid 布局 */
-      grid-column: 1 / -1 !important;
+      /* 强制覆盖可能被继承的 Butterfly 文章卡片样式 */
+      display: block !important;
+      position: static !important;
+      overflow: visible !important;
+      height: auto !important;
+      flex-direction: row !important;
+      align-items: stretch !important;
+      background: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      border-radius: 0 !important;
     }
     @keyframes dn-fadeIn {
       from { opacity: 0; transform: translateY(16px); }
@@ -180,10 +189,10 @@
       <div class="dn-scroll">${cardsHTML}</div>
     `;
 
-    /* 插入到 #recent-posts 内部的最前面 */
+    /* 插入到 #recent-posts 的前面（作为独立区块） */
     var target = document.getElementById('recent-posts');
-    if (target) {
-      target.insertBefore(container, target.firstChild);
+    if (target && target.parentNode) {
+      target.parentNode.insertBefore(container, target);
     } else {
       var main = document.querySelector('#page') || document.querySelector('main') || document.body;
       main.prepend(container);
