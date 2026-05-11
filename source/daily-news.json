@@ -1,45 +1,45 @@
 {
-  "updateDate": "2026-05-10",
+  "updateDate": "2026-05-11",
   "news": [
     {
-      "title": "人工智能终端系列国家标准正式发布",
-      "summary": "涉及手机、眼镜、耳机等终端产品，首批标准包含7个品类，明确了智能化概念、等级划分和测试方法。",
-      "image": "https://picsum.photos/seed/ai-standard-2026/400/240",
+      "title": "工业和信息化部启动人工智能科技伦理审查与服务先导计划",
+      "summary": "工信部日前印发通知，正式启动人工智能科技伦理审查与服务先导计划，依托国家人工智能产业创新应用先导区所在省份，率先探索人工智能科技伦理审查机制建设。计划涵盖制度建设、组织建设、服务平台、实践应用等六大任务，并设立全国人工智能科技伦理风险监测服务网络。",
+      "image": "https://picsum.photos/seed/ai-ethics-2026/400/240",
       "category": "科技",
       "categoryColor": "#4facfe",
-      "link": "https://www.chinanews.com.cn/cj/2026/05-08/10617706.shtml"
+      "link": "https://www.news.cn/tech/20260509/641b2a4b980841fba3f0a7c8a9d67dd0/c.html"
     },
     {
-      "title": "四部门发文促进人工智能与能源双向赋能",
-      "summary": "国家能源局等四部门联合印发行动方案，力争到2030年构建AI与能源深度融合的发展新格局。",
-      "image": "https://picsum.photos/seed/ai-energy-2026/400/240",
-      "category": "政策",
-      "categoryColor": "#43e97b",
-      "link": "https://finance.people.com.cn/n1/2026/0508/c1004-40716118.html"
+      "title": "全球现役最强货运飞船！天舟十号今日8时13分发射",
+      "summary": "天舟十号货运飞船总长10.6米，发射重量约14吨，计划上行总重近6.2吨的补给物资，包括220多件（套）货物和700公斤推进剂，保障神舟二十三号和神舟二十四号两批航天员乘组在轨工作生活需求。",
+      "image": "https://picsum.photos/seed/tianzhou-2026/400/240",
+      "category": "社会",
+      "categoryColor": "#f7971e",
+      "link": "https://finance.sina.com.cn/tech/discovery/2026-05-11/doc-inhxnmvr2054539.shtml"
     },
     {
-      "title": "2026世界数字教育大会将在杭州举办",
-      "summary": "5月11日至13日，教育部与浙江省共同举办数字教育大会，将发布8项重磅成果，含全球AI教育服务平台。",
+      "title": "增长14.9% 我国外贸延续良好增长态势",
+      "summary": "海关总署数据显示，前4个月我国货物贸易进出口总值16.23万亿元，同比增长14.9%。其中出口9.33万亿元增长11.3%，进口6.9万亿元增长20%。4月当月进出口4.38万亿元增长14.2%，外贸展现强劲韧性。",
+      "image": "https://picsum.photos/seed/trade-2026/400/240",
+      "category": "经济",
+      "categoryColor": "#a18cd1",
+      "link": "https://jingji.cctv.com/2026/05/09/ARTIBQ8lyNZEXUm7xUx6R3m2260509.shtml"
+    },
+    {
+      "title": "2026世界数字教育大会今日杭州开幕 将发布8项成果",
+      "summary": "2026世界数字教育大会于5月11日至13日在杭州举办，以"人工智能+教育：变革 发展 治理"为主题。大会将发布《中国智慧教育发展报告（2025—2026）》等8项重磅成果，并推出全球人工智能教育服务平台、终身学习中心等核心功能。",
       "image": "https://picsum.photos/seed/digital-edu-2026/400/240",
       "category": "教育",
       "categoryColor": "#fa709a",
-      "link": "https://edu.people.com.cn/n1/2026/0507/c1006-40715177.html"
+      "link": "https://education.news.cn/20260507/9d567380459142998f88c533d7a05596/c.html"
     },
     {
-      "title": "深圳\"科技+文化\"激活夜间消费新引擎",
-      "summary": "深圳依托地铁站点串联城市光影与商圈资源，将地铁出入口打造成展示城市风貌的全新窗口。",
-      "image": "https://picsum.photos/seed/shenzhen-night-2026/400/240",
-      "category": "社会",
-      "categoryColor": "#f7971e",
-      "link": "https://news.cctv.com/"
-    },
-    {
-      "title": "新能源汽车等高附加值产品出口势头强劲",
-      "summary": "4月份外贸运行展现强劲韧性，新能源汽车、消费电子产品等出口持续向好，从沿海\"独唱\"转向全域协同。",
-      "image": "https://picsum.photos/seed/ev-export-2026/400/240",
-      "category": "经济",
-      "categoryColor": "#a18cd1",
-      "link": "https://news.cctv.com/"
+      "title": "美伊谈判受挫 国际油价显著上涨",
+      "summary": "美伊谈判陷入僵局，伊朗已拒绝美国提出的方案，特朗普称伊朗方面的回应"完全不可接受"。受地缘政治紧张局势影响，国际油价显著上涨，市场担忧霍尔木兹海峡航运安全。",
+      "image": "https://picsum.photos/seed/us-iran-2026/400/240",
+      "category": "国际",
+      "categoryColor": "#667eea",
+      "link": "https://www.xinhuanet.com/world/jsxw/"
     }
   ]
 }
