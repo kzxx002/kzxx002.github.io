@@ -5,6 +5,9 @@
 (function () {
   'use strict';
 
+  /* 只在首页显示新闻 */
+  if (location.pathname !== '/' && location.pathname !== '/index.html') return;
+
   const CONTAINER_ID = 'daily-news-widget';
   const DATA_URL = '/daily-news.json';
 
