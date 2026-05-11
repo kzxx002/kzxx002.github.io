@@ -14,24 +14,27 @@
   /* ---- 样式注入 ---- */
   const style = document.createElement('style');
   style.textContent = `
-    /* 新闻容器 —— 完全独立，不继承任何 Butterfly 文章样式 */
+    /* 新闻容器 —— 在 #recent-posts 内部，完全独立 */
     #${CONTAINER_ID} {
-      max-width: 100%;
       width: 100%;
       margin: 0 0 24px;
       padding: 0;
       animation: dn-fadeIn .6s ease-out;
-      /* 强制覆盖可能被继承的 Butterfly 文章卡片样式 */
+      /* 完全覆盖可能被继承的样式 */
       display: block !important;
       position: static !important;
       overflow: visible !important;
       height: auto !important;
       flex-direction: row !important;
+      flex-wrap: wrap !important;
       align-items: stretch !important;
       background: none !important;
       box-shadow: none !important;
       border: none !important;
       border-radius: 0 !important;
+      /* 确保不受 .recent-post-item 高度限制 */
+      max-height: none !important;
+      min-height: 0 !important;
     }
     @keyframes dn-fadeIn {
       from { opacity: 0; transform: translateY(16px); }
@@ -189,12 +192,18 @@
       <div class="dn-scroll">${cardsHTML}</div>
     `;
 
-    /* 插入到 #recent-posts 的前面（作为独立区块） */
-    var target = document.getElementById('recent-posts');
-    if (target && target.parentNode) {
-      target.parentNode.insertBefore(container, target);
+    /* 插入到 #recent-posts 内部、.recent-post-items 之前
+       这样不会影响外层 .layout 的 flex 布局 */
+    var posts = document.getElementById('recent-posts');
+    if (posts) {
+      var items = posts.querySelector('.recent-post-items');
+      if (items) {
+        posts.insertBefore(container, items);
+      } else {
+        posts.prepend(container);
+      }
     } else {
-      var main = document.querySelector('#page') || document.querySelector('main') || document.body;
+      var main = document.querySelector('main') || document.body;
       main.prepend(container);
     }
   }
