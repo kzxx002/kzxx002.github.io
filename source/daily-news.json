@@ -1,45 +1,51 @@
-{
-  "updateDate": "2026-05-11",
-  "news": [
-    {
-      "title": "APIO 2026中国区活动在北大附中成功举办 768名师生参赛",
-      "summary": "APIO 2026中国区活动5月7日至11日在北京大学附属中学举办，来自27个省市768名师生参加，共产生金牌75名、银牌117名、铜牌200名。活动包含专题讲座、嘉年华及社会实践等环节。",
-      "image": "/images/news/apio2026-opening.jpg",
-      "category": "\u4fe1\u5965",
-      "categoryColor": "#4facfe",
-      "link": "https://www.noi.cn/xw/2026-05-11/891305.shtml"
-    },
-    {
-      "title": "CCF发布NOI 2026报名通知 赛事将于7月在青岛举行",
-      "summary": "第43届全国青少年信息学奥林匹克竞赛（NOI 2026）将于7月18日至24日在山东青岛举行，由青岛市城阳第一高级中学承办。竞赛零收费，报名截止时间为5月17日18:00，以省为单位由特派员负责报名。",
-      "image": "/images/news/noi2026-register.jpg",
-      "category": "\u4fe1\u5965",
-      "categoryColor": "#4facfe",
-      "link": "https://www.noi.cn/xw/2026-05-07/885195.shtml"
-    },
-    {
-      "title": "APIO 2026中国区活动荣誉名单公示",
-      "summary": "NOI官网公示APIO 2026中国区活动荣誉名单。本届活动共768名师生参加，经过两天测试角逐，最终75人获得金牌、117人获得银牌、200人获得铜牌，覆盖全国27个省市。",
-      "image": "/images/news/apio2026-award.jpg",
-      "category": "\u4fe1\u5965",
-      "categoryColor": "#4facfe",
-      "link": "https://www.noi.cn/hjmd/mdgs/2026/2026-05-10/890915.shtml"
-    },
-    {
-      "title": "2026世界数字教育大会在杭州开幕 聚焦人工智能+教育",
-      "summary": "2026世界数字教育大会于5月11日至13日在杭州举办，以\u201c人工智能+教育：变革 发展 治理\u201d为主题，将发布《中国智慧教育发展报告》等八项成果，并推出全球AI教育服务平台。",
-      "image": "/images/news/digital-edu-2026.svg",
-      "category": "\u6559\u80b2",
-      "categoryColor": "#fa709a",
-      "link": "https://education.news.cn/20260507/339d9327fdeb4f2fa23ef85f34bd911d/c.html"
-    },
-    {
-      "title": "2026年职业教育活动周启动 精彩展播活动上线",
-      "summary": "教育部职成司联合新华网推出职业教育活动周专题展播页面，展播时间为5月10日至6月30日，多角度展示各地现代职业教育体系建设创新举措与丰硕成果，弘扬技能宝贵时代风尚。",
-      "image": "/images/news/vocational-edu-2026.svg",
-      "category": "\u6559\u80b2",
-      "categoryColor": "#fa709a",
-      "link": "https://education.news.cn/20260510/da32058543d04237a0047193effc4a4b/c.html"
-    }
-  ]
-}
+[
+  {
+    "title": "392人获奖！APIO 2026中国区获奖名单公示，宁波7人获奖4枚金牌",
+    "url": "https://www.sohu.com/a/1020838302_121124015",
+    "image": "/images/news/apio2026-0512.jpg",
+    "category": "信奥",
+    "date": "2026-05-12"
+  },
+  {
+    "title": "2026世界数字教育大会在杭州开幕，发布八项成果聚焦AI+教育",
+    "url": "https://www.xinhuanet.com/edu/20260507/339d9327fdeb4f2fa23ef85f34bd911d/c.html",
+    "image": "/images/news/digital-edu-0512.jpg",
+    "category": "教育",
+    "date": "2026-05-12"
+  },
+  {
+    "title": "香港将设AI+与产业发展策略委员会，聚焦具身智能推动产业升级",
+    "url": "https://www.chinanews.com.cn/dwq/2026/05-12/10619725.shtml",
+    "image": "/images/news/hk-ai-0512.jpg",
+    "category": "科技",
+    "date": "2026-05-12"
+  },
+  {
+    "title": "央行发布2026年Q1货币政策执行报告：精准有效实施适度宽松的货币政策",
+    "url": "https://finance.sina.com.cn/stock/y/2026-05-12/doc-inhxqvap1355901.shtml",
+    "image": "/images/news/econ-currency-0512.jpg",
+    "category": "经济",
+    "date": "2026-05-12"
+  },
+  {
+    "title": "DeepSeek估值飙升至3500亿元，首轮募资最高500亿元",
+    "url": "https://finance.sina.com.cn/stock/y/2026-05-12/doc-inhxqvap1355901.shtml",
+    "image": "/images/news/deepseek-0512.jpg",
+    "category": "科技",
+    "date": "2026-05-12"
+  },
+  {
+    "title": "特朗普据悉考虑恢复对伊动武，伊朗被曝在霍尔木兹海峡部署潜艇",
+    "url": "https://xnews.jin10.com/details/218724",
+    "image": "/images/news/intl-iran-0512.jpg",
+    "category": "国际",
+    "date": "2026-05-12"
+  },
+  {
+    "title": "2026国际博物馆日中国主会场活动将于5月18日在内蒙古举行",
+    "url": "https://culture.gmw.cn/2026-05/11/content_38758578.htm",
+    "image": "/images/news/museum-0512.jpg",
+    "category": "社会",
+    "date": "2026-05-12"
+  }
+]
