@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" rx="12" fill="url(#bg)"/>
+  <!-- Icon -->
+  <g transform="translate(170, 30) scale(3)">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="white"/>
+  </g>
+  <!-- Category tag -->
+  <rect x="10" y="10" width="60" height="22" rx="11" fill="rgba(255,255,255,0.25)"/>
+  <text x="40" y="25" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">国际</text>
+  <!-- Title lines -->
+  <text x="200" y="150" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">特朗普考虑恢复对伊动武</text>
+  <!-- Date -->
+  <text x="200" y="235" font-family="sans-serif" font-size="12" fill="rgba(255,255,255,0.7)" text-anchor="middle">2026-05-12</text>
+</svg>
