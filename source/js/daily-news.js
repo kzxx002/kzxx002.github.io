@@ -168,35 +168,48 @@
   `;
   document.head.appendChild(style);
 
+  /* ---- 分类颜色映射 ---- */
+  var CATEGORY_COLORS = {
+    '信奥': '#4facfe', '教育': '#fa709a', '科技': '#667eea',
+    '经济': '#a18cd1', '社会': '#f7971e', '国际': '#43e97b'
+  };
+
   /* ---- 渲染函数 ---- */
-  function render(data) {
-    const container = document.createElement('div');
+  function render(rawData) {
+    /* 兼容两种 JSON 格式：数组 或 { news: [...] } */
+    var newsList = Array.isArray(rawData) ? rawData : (rawData.news || []);
+    if (!newsList.length) return;
+
+    var dateStr = newsList[0].date || new Date().toISOString().slice(0, 10);
+    var dateLabel = dateStr.replace(/-/g, '/');
+
+    var container = document.createElement('div');
     container.id = CONTAINER_ID;
 
-    const dateStr = data.updateDate || new Date().toISOString().slice(0, 10);
-    const dateLabel = dateStr.replace(/-/g, '/');
-
-    let cardsHTML = '';
-    data.news.forEach(function (item) {
-      cardsHTML += `
-        <a class="dn-card" href="${item.link}" target="_blank" rel="noopener noreferrer">
-          <img class="dn-card-img" src="${item.image}" alt="${item.title}" loading="lazy" />
-          <div class="dn-card-body">
-            <span class="dn-card-category" style="background:${item.categoryColor}">${item.category}</span>
-            <div class="dn-card-title">${item.title}</div>
-            <div class="dn-card-summary">${item.summary}</div>
-          </div>
-        </a>`;
+    var cardsHTML = '';
+    newsList.forEach(function (item) {
+      var link = item.url || item.link || '#';
+      var color = item.categoryColor || CATEGORY_COLORS[item.category] || '#4facfe';
+      var summary = item.summary || '';
+      cardsHTML += '\
+        <a class="dn-card" href="' + link + '" target="_blank" rel="noopener noreferrer">\
+          <img class="dn-card-img" src="' + item.image + '" alt="' + item.title + '" loading="lazy" />\
+          <div class="dn-card-body">\
+            <span class="dn-card-category" style="background:' + color + '">' + item.category + '</span>\
+            <div class="dn-card-title">' + item.title + '</div>\
+            ' + (summary ? '<div class="dn-card-summary">' + summary + '</div>' : '') + '\
+          </div>\
+        </a>';
     });
 
-    container.innerHTML = `
-      <div class="dn-header">
-        <span class="dn-header-icon">&#x1F4F0;</span>
-        <span class="dn-header-title">每日新闻</span><span class="dn-header-disclaimer">内容由 AI 生成，请核实重要信息。</span>
-        <span class="dn-header-date">${dateLabel}</span>
-      </div>
-      <div class="dn-scroll">${cardsHTML}</div>
-    `;
+    container.innerHTML = '\
+      <div class="dn-header">\
+        <span class="dn-header-icon">&#x1F4F0;</span>\
+        <span class="dn-header-title">每日新闻</span><span class="dn-header-disclaimer">内容由 AI 生成，请核实重要信息。</span>\
+        <span class="dn-header-date">' + dateLabel + '</span>\
+      </div>\
+      <div class="dn-scroll">' + cardsHTML + '</div>\
+    ';
 
     /* 插入到 #recent-posts 内部、.recent-post-items 之前
        这样不会影响外层 .layout 的 flex 布局 */
