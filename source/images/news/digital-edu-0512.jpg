@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" rx="12" fill="url(#bg)"/>
+  <!-- Icon -->
+  <g transform="translate(170, 30) scale(3)">
+    <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" fill="white"/>
+  </g>
+  <!-- Category tag -->
+  <rect x="10" y="10" width="60" height="22" rx="11" fill="rgba(255,255,255,0.25)"/>
+  <text x="40" y="25" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">教育</text>
+  <!-- Title lines -->
+  <text x="200" y="150" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">2026世界数字教育大会在杭州开幕</text>
+  <!-- Date -->
+  <text x="200" y="235" font-family="sans-serif" font-size="12" fill="rgba(255,255,255,0.7)" text-anchor="middle">2026-05-12</text>
+</svg>
