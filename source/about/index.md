@@ -23,7 +23,7 @@ type: "about"
 
 - GitHub: [kzxx002](https://github.com/kzxx002)
 - Luogu: [zpy12345](https://www.luogu.com.cn/user/920886)
-- CSDN：[stolentime](https://blog.csdn.net/weixin_46785057)
+- CSDN:[stolentime](https://blog.csdn.net/weixin_46785057)
 
 ---
 
