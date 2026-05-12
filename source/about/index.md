@@ -6,22 +6,25 @@ type: "about"
 
 ## 你好！欢迎来到我的博客 👋
 
-这是一个个人博客，用于记录技术学习、项目实践和生活感悟。
+这是一个个人博客，用于记录技术与生活。
 
 ### 关于我
 
-- 热爱编程与技术探索
-- 喜欢折腾各种开源项目
-- 相信持续学习的力量
+- 一名蒟蒻Oler
 
 ### 博客搭建
 
 本博客使用 [Hexo](https://hexo.io/) 搭建，主题使用 [Butterfly](https://github.com/jerryc127/hexo-theme-butterfly)，托管在 [GitHub Pages](https://pages.github.com/) 上。
 
+特别感谢：
+- [一言](https://hitokoto.cn/)
+
 ### 联系方式
 
 - GitHub: [kzxx002](https://github.com/kzxx002)
+- Luogu: [zpy12345](https://www.luogu.com.cn/user/920886)
+- CSDN：[stolentime](https://blog.csdn.net/weixin_46785057)
 
 ---
 
-*路漫漫其修远兮，吾将上下而求索*
+*大鹏一日同风起，扶摇直上九万里。*
