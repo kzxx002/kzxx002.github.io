@@ -13,8 +13,6 @@ menu:
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  图床: /tools/upload/ || fas fa-cloud-upload-alt
-  剪贴板: /tools/clipboard/ || fas fa-clipboard
   友链: /link/ || fas fa-link
   相册: /gallery/ || fas fa-images
   关于: /about/ || fas fa-heart
