@@ -147,8 +147,8 @@ comments:
 giscus:
   enable: true
   repo: kzxx002/kzxx002.github.io
-  repo_id:
-  category_id:
+  repo_id: R_kgDOSZJBUQ
+  category_id: DIC_kwDOSZJBUc4C8ydH
   mapping: pathname
   strict: 0
   reactions_enabled: 1
