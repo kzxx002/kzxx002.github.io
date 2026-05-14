@@ -356,8 +356,16 @@ inject:
     - <script src="/js/hitokoto.js"></script>
     - <script src="/js/particle-dark.js"></script>
 
-# 侧边栏公告
+# 侧边栏
 aside:
+  enable: true
+  card_author:
+    enable: true
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/kzxx002
   card_announcement:
     enable: true
     content: 5月20日博客正式上线！
