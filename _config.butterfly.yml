@@ -58,8 +58,8 @@ social:
 
 # 头像
 avatar:
-  img: https://cdn.luogu.com.cn/upload/usericon/920886.png
-  effect: true
+  img: /img/avatar.png
+  effect: false
 
 # 页脚
 footer:
