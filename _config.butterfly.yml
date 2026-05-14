@@ -352,7 +352,7 @@ inject:
         }
       </style>
   bottom:
-    # - <script src="/js/daily-news.js"></script>  # 暂时关闭每日新闻
+    - <script src="/js/daily-news.js"></script>  # API 版本（whyta.cn tx-news）
     - <script src="/js/hitokoto.js"></script>
     - <script src="/js/particle-dark.js"></script>
 # Hexo 复制 _data 目录中的文件到 public（用于新闻数据等静态 JSON）
