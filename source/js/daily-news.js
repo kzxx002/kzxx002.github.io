@@ -10,7 +10,7 @@
   if (location.pathname !== '/' && location.pathname !== '/index.html') return;
 
   var API_KEY = '6d997a997fbf';
-  var API_BASE = 'https://apis.whyta.cn/api/tx';
+  var API_BASE = 'https://whyta.cn/api/tx';
   var CATEGORIES = [
     { id: 'guonei', label: '国内', color: '#4facfe' },
     { id: 'world',  label: '国际', color: '#43e97b' },
@@ -252,16 +252,16 @@
 
   /* ---- 并发请求三个分类 ---- */
   var promises = CATEGORIES.map(function (cat) {
-    var url = API_BASE + '/' + cat.id + '?key=' + API_KEY + '&num=' + NUM_PER_CATEGORY;
+    var url = API_BASE + '/' + cat.id + '?key=' + API_KEY;
     return fetch(url)
       .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         return res.json();
       })
       .then(function (data) {
-        var list = data.newslist || data.data || data.news || [];
+        /* 数据在 result.newslist 中 */
+        var list = (data.result && data.result.newslist) || [];
         if (!Array.isArray(list)) list = [];
-        /* 给每条打上分类标签和颜色 */
         return list.slice(0, NUM_PER_CATEGORY).map(function (item) {
           item._category = cat.label;
           item._color = cat.color;
