@@ -355,5 +355,11 @@ inject:
     - <script src="/js/daily-news.js"></script>  # API 版本（whyta.cn tx-news）
     - <script src="/js/hitokoto.js"></script>
     - <script src="/js/particle-dark.js"></script>
+
+# 侧边栏公告
+aside:
+  card_announcement:
+    enable: true
+    content: 5月20日博客正式上线！
 # Hexo 复制 _data 目录中的文件到 public（用于新闻数据等静态 JSON）
 # 不需要插件，手动用 hexo generator 或直接把 JSON 放到 source 根目录
