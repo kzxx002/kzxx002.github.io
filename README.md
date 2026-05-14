@@ -1,6 +1,6 @@
 # KZXX002's Blog
 
-Personal blog built with Hexo & Butterfly theme, hosted on GitHub Pages.
+Personal blog built with Hexo & Butterfly theme, hosted on GitHub Pages.(May contain AI-generated content)
 
 ## Links
 
